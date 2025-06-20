@@ -27,7 +27,7 @@ export default defineConfig({
   build: {
     target: 'es2020',
     rollupOptions: {
-      external: ['react', 'react-dom']
+      // external: ['react', 'react-dom']
     }
   }
 });

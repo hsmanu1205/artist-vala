@@ -51,11 +51,11 @@ Whether you’re organizing a corporate event, wedding, or college fest — we b
 ### 🖼️ Screenshots
 
 <p align="center">
-  <img src="https://i.ibb.co/mrfQpvYG/Home.png" alt="Homepage" width="800"/>
+  <img src="/Screenshots/Home.png" alt="Homepage" width="800"/>
   <br/><br/>
-  <img src="https://i.ibb.co/zTm03b1z/About.png" alt="About Page" width="800"/>
+  <img src="/Screenshots/About.png" alt="About Page" width="800"/>
   <br/><br/>
-  <img src="https://i.ibb.co/cSB29BCy/Category.png" alt="Category Page" width="800"/>
+  <img src="/Screenshots/Category.png" alt="Category Page" width="800"/>
 </p>
 
 ---

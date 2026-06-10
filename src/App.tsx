@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Index from "@/pages/Index";
 import About from "@/pages/About";
@@ -88,13 +88,13 @@ const App = () => (
                   whileHover={{ x: 5 }}
                   transition={{ type: "spring", stiffness: 400 }}
                 >
-                  <a
-                    href={link.href}
+                  <Link
+                    to={link.href}
                     className="text-gray-400 hover:text-purple-300 transition-colors duration-300 flex items-center group"
                   >
                     <span className="w-1 h-1 bg-purple-500 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
                     {link.name}
-                  </a>
+                  </Link>
                 </motion.li>
               ))}
             </ul>
@@ -115,13 +115,13 @@ const App = () => (
                   whileHover={{ x: 5 }}
                   transition={{ type: "spring", stiffness: 400 }}
                 >
-                  <a
-                    href={category.href}
+                  <Link
+                    to={category.href}
                     className="text-gray-400 hover:text-purple-300 transition-colors duration-300 flex items-center group"
                   >
                     <span className="w-1 h-1 bg-purple-500 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
                     {category.name}
-                  </a>
+                  </Link>
                 </motion.li>
               ))}
             </ul>
@@ -186,15 +186,19 @@ const App = () => (
             viewport={{ once: true }}
             className="flex flex-wrap justify-center gap-4 md:gap-6"
           >
-            {["Privacy Policy", "Terms of Service", "Cookie Policy"].map((item, index) => (
-              <a
+            {[
+              { name: "Privacy Policy", href: "/privacy-policy" },
+              { name: "Terms of Service", href: "/terms-of-service" },
+              { name: "Cookie Policy", href: "/cookie-policy" }
+            ].map((item, index) => (
+              <Link
                 key={index}
-                href="#"
+                to={item.href}
                 className="text-gray-500 hover:text-purple-300 text-xs md:text-sm transition-colors duration-300 relative group"
               >
-                {item}
+                {item.name}
                 <span className="absolute bottom-0 left-0 w-0 h-px bg-purple-400 transition-all duration-300 group-hover:w-full"></span>
-              </a>
+              </Link>
             ))}
           </motion.div>
         </div>

@@ -566,10 +566,8 @@ export default function Index() {
                       <Users className="w-4 h-4 mr-1" />
                       {performance.views} views
                     </span>
-                    <a
-                      href="http://localhost:8080/instant-booking"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                    <Link
+                      to="/instant-booking"
                     >
                       <Button
                         size="sm"
@@ -577,7 +575,7 @@ export default function Index() {
                       >
                         Book Now
                       </Button>
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 <div className="absolute -bottom-1 left-0 w-full h-2 bg-gradient-to-t from-purple-500/30 to-transparent"></div>

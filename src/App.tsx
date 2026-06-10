@@ -11,6 +11,9 @@ import Artists from "@/pages/Artists";
 import ArtistDetail from "@/pages/ArtistDetail";
 import Contact from "@/pages/Contact";
 import InstantBooking from "@/pages/InstantBooking";
+import PrivacyPolicy from "@/pages/PrivacyPolicy";
+import TermsOfService from "@/pages/TermsOfService";
+import CookiePolicy from "@/pages/CookiePolicy";
 import NotFound from "@/pages/NotFound";
 import { motion } from "framer-motion";
 
@@ -36,6 +39,9 @@ const App = () => (
               <Route path="/artist/:id" element={<ArtistDetail />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/instant-booking" element={<InstantBooking />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+              <Route path="/terms-of-service" element={<TermsOfService />} />
+              <Route path="/cookie-policy" element={<CookiePolicy />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
@@ -176,7 +182,7 @@ const App = () => (
             viewport={{ once: true }}
             className="text-gray-500 mb-4 md:mb-0 text-sm"
           >
-            © {new Date().getFullYear()} Artist Vaala by Scom Experience Pvt. Ltd. All rights reserved.
+            © {new Date().getFullYear()} Artist Vaala by Scom Experience Pvt. Ltd. All rights reserved. Made by Harshit Singh.
           </motion.p>
 
           <motion.div
